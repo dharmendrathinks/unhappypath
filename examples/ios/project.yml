@@ -1,0 +1,48 @@
+name: UnhappyPathDemo
+options:
+  bundleIdPrefix: dev.unhappypath
+  deploymentTarget:
+    iOS: '18.0'
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    CODE_SIGNING_ALLOWED: NO
+    GENERATE_INFOPLIST_FILE: YES
+    TARGETED_DEVICE_FAMILY: '1,2'
+    IPHONEOS_DEPLOYMENT_TARGET: '18.0'
+targets:
+  UnhappyPathDemo:
+    type: application
+    platform: iOS
+    sources: [UnhappyPathDemo]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.unhappypath.demo
+        INFOPLIST_KEY_CFBundleDisplayName: UnhappyPath
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    info:
+      path: ../../.cache/ios/Info.plist
+      properties:
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+  UnhappyPathUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UnhappyPathUITests]
+    dependencies:
+      - target: UnhappyPathDemo
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.unhappypath.uitests
+        TEST_TARGET_NAME: UnhappyPathDemo
+schemes:
+  UnhappyPathDemo:
+    build:
+      targets:
+        UnhappyPathDemo: all
+        UnhappyPathUITests: [test]
+    test:
+      targets: [UnhappyPathUITests]
+      gatherCoverageData: false

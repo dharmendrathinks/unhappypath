@@ -1,0 +1,1 @@
+{"schemaVersion":1,"baseRef":"main","checks":{"build":["npm","run","build"],"test":["npm","test"],"lint":["npm","run","lint"],"static":["npm","run","typecheck"]}}

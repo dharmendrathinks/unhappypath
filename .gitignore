@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.cache/
+runs/
+*.tgz
+.DS_Store
+.env
+.env.*
+*.xcuserstate
+xcuserdata/
+
+test-results/
+playwright-report/
+shared-*/

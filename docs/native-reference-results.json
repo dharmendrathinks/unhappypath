@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "description": "Observed synthetic native reference experiments; no external-app or physical-device claim.",
+  "results": [
+    {
+      "scenario": "booking",
+      "variant": "baseline",
+      "verdict": "PASS",
+      "startedAt": "2026-10-03T18:37:11.132Z",
+      "durationMs": 73313,
+      "assertions": [
+        {
+          "id": "exactly-one-booking",
+          "description": "One user intent produces exactly one committed booking",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "id": "confirmation-visible",
+          "description": "The client displays a confirmed booking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "faultActivated": false,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    },
+    {
+      "scenario": "booking",
+      "variant": "broken",
+      "verdict": "FAIL",
+      "startedAt": "2026-10-03T18:38:24.452Z",
+      "durationMs": 43001,
+      "assertions": [
+        {
+          "id": "exactly-one-booking",
+          "description": "One user intent produces exactly one committed booking",
+          "expected": 1,
+          "actual": 2,
+          "passed": false
+        },
+        {
+          "id": "confirmation-visible",
+          "description": "The client displays a confirmed booking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "faultActivated": true,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    },
+    {
+      "scenario": "booking",
+      "variant": "fixed",
+      "verdict": "PASS",
+      "startedAt": "2026-10-03T18:39:07.463Z",
+      "durationMs": 45446,
+      "assertions": [
+        {
+          "id": "exactly-one-booking",
+          "description": "One user intent produces exactly one committed booking",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "id": "confirmation-visible",
+          "description": "The client displays a confirmed booking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "faultActivated": true,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    },
+    {
+      "scenario": "draft",
+      "variant": "baseline",
+      "verdict": "PASS",
+      "startedAt": "2026-10-03T18:39:52.922Z",
+      "durationMs": 45873,
+      "assertions": [
+        {
+          "id": "draft-survives",
+          "description": "Saved draft remains readable",
+          "expected": "Remember the umbrella.",
+          "actual": "Remember the umbrella.",
+          "passed": true
+        }
+      ],
+      "faultActivated": false,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    },
+    {
+      "scenario": "draft",
+      "variant": "broken",
+      "verdict": "FAIL",
+      "startedAt": "2026-10-03T18:40:38.806Z",
+      "durationMs": 46415,
+      "assertions": [
+        {
+          "id": "draft-survives",
+          "description": "Saved draft remains readable",
+          "expected": "Remember the umbrella.",
+          "actual": "What do you want to remember?",
+          "passed": false
+        }
+      ],
+      "faultActivated": true,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    },
+    {
+      "scenario": "draft",
+      "variant": "fixed",
+      "verdict": "PASS",
+      "startedAt": "2026-10-03T18:41:25.241Z",
+      "durationMs": 46957,
+      "assertions": [
+        {
+          "id": "draft-survives",
+          "description": "Saved draft remains readable",
+          "expected": "Remember the umbrella.",
+          "actual": "Remember the umbrella.",
+          "passed": true
+        }
+      ],
+      "faultActivated": true,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    },
+    {
+      "scenario": "dependency",
+      "variant": "baseline",
+      "verdict": "PASS",
+      "startedAt": "2026-10-03T18:42:12.211Z",
+      "durationMs": 39665,
+      "assertions": [
+        {
+          "id": "exactly-one-booking",
+          "description": "One user intent produces exactly one committed booking",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "id": "confirmation-visible",
+          "description": "The client displays a confirmed booking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "faultActivated": false,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    },
+    {
+      "scenario": "dependency",
+      "variant": "broken",
+      "verdict": "FAIL",
+      "startedAt": "2026-10-03T18:42:51.885Z",
+      "durationMs": 42325,
+      "assertions": [
+        {
+          "id": "exactly-one-booking",
+          "description": "One user intent produces exactly one committed booking",
+          "expected": 1,
+          "actual": 0,
+          "passed": false
+        },
+        {
+          "id": "confirmation-visible",
+          "description": "The client displays a confirmed booking",
+          "expected": true,
+          "actual": false,
+          "passed": false
+        }
+      ],
+      "faultActivated": true,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    },
+    {
+      "scenario": "dependency",
+      "variant": "fixed",
+      "verdict": "PASS",
+      "startedAt": "2026-10-03T18:43:34.221Z",
+      "durationMs": 42586,
+      "assertions": [
+        {
+          "id": "exactly-one-booking",
+          "description": "One user intent produces exactly one committed booking",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "id": "confirmation-visible",
+          "description": "The client displays a confirmed booking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "faultActivated": true,
+      "environment": {
+        "node": "v26.5.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "packageVersion": "0.1.0",
+        "driverDetails": {
+          "driver": "ios",
+          "runtime": "18.6",
+          "runtimeBuild": "22G86",
+          "device": "iPhone 16 Pro",
+          "xcode": "Xcode 27.0\nBuild version 27A266a",
+          "sourceIdentity": "{\"examples/ios/project.yml\":\"9ef91e0de76f7ac6125cac55ae62f0059b518d97326cb7579dbd1040574875c1\",\"examples/ios/UnhappyPathDemo/App.swift\":\"c86ffd9a19d3ed9df758ce54310fe87bf59239b98b6f41ae682297b513555619\",\"examples/ios/UnhappyPathUITests/JourneyTests.swift\":\"f165c58607facdfba0c201c79d2b1c408f11855270f7879d2f7641096418b7ec\"}",
+          "termination": "XCUIApplication.terminate; not jetsam"
+        }
+      }
+    }
+  ]
+}

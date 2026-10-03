@@ -1,0 +1,19 @@
+name: Bug report
+description: Report a reproducible harness, adapter or report defect.
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Include expected behavior, actual behavior and the command. Exclude tokens and private app data.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: Node, OS, Xcode and Simulator versions when relevant.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction and reviewed evidence
+      description: Prefer a small synthetic reproducer. Do not attach raw native test plans or private recordings.
