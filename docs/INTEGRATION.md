@@ -80,3 +80,10 @@ network pinning, CloudKit, StoreKit, encrypted protocols and third-party identit
 flows need separate fixtures; they are not automatically intercepted. For real
 backend commit semantics, expose a test-only event at the durable commit boundary
 and query an independent test ledger. A timeout alone cannot identify that boundary.
+
+## Existing-app validation
+
+The driver interface has also been exercised against one owner-supplied SwiftUI
+editor, using a real save/termination/reopen journey and an injected lost-write
+negative control. See [the experiment and its limits](EXISTING-APP-VALIDATION.md).
+That private application's source and adapter are not distributed here.
