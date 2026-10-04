@@ -1,4 +1,4 @@
-# Release verification: 0.1.0 developer preview
+# Release verification: 0.1.0
 
 Executed locally on 4 October 2026 (Asia/Kolkata; run timestamps use UTC).
 These are observed reference experiments, not measurements of an external app.
@@ -68,8 +68,8 @@ On 4 October 2026, [GitHub Actions run 37169391165](https://github.com/dharmendr
 passed on commit `b00848f`. Both Ubuntu jobs (Node 22 and 24) passed the build,
 14 automated tests, formatting, strict type checking, nine portable reference
 experiments and package dry run. The Node 22 job also passed the Chromium report
-test. Portable evidence was retained as workflow artifacts. The repository remains
-private, so these links currently require repository access.
+test. Portable evidence was retained as workflow artifacts. The repository was
+private during those runs and was subsequently made public by its owner.
 
 
 [Native GitHub Actions run 37169418055](https://github.com/dharmendrathinks/unhappypath/actions/runs/37169418055)

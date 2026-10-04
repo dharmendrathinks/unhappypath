@@ -1,6 +1,6 @@
 # Preparing an open-source release
 
-The repository is ready for a public developer-preview release when its recorded
+The repository is ready for a public release when its recorded
 checks pass and the supported scope is accurately described. External adoption,
 physical-device coverage and general production suitability are separate claims.
 
@@ -41,8 +41,8 @@ publication. If a registry release is desired, confirm the available package nam
 and ownership, update metadata and regenerate the lockfile before publishing.
 
 The repository is hosted at [dharmendrathinks/unhappypath](https://github.com/dharmendrathinks/unhappypath).
-It is currently private; pushing code does not change its visibility. Keep release
-preparation private until the owner explicitly chooses to make it public.
+The owner has authorized public visibility. Release preparation does not itself
+authorize future visibility changes.
 Description, topics, license and contribution links are supplied. Enable private
 vulnerability reporting when the host supports it. Record actual remote CI results
 in [VERIFICATION.md](VERIFICATION.md); configured workflows alone are not evidence
@@ -50,4 +50,16 @@ of a successful run.
 
 No publishing credentials or automatic publication workflow are included. GitHub
 visibility changes, GitHub releases and npm publication are separate actions from
-pushing the source to this private repository.
+pushing the source to the repository.
+
+## Versioned GitHub release
+
+Release `v0.1.0` is a regular GitHub release of package version `0.1.0`. Publish an
+annotated tag at the reviewed commit, verify the tag matches the source archive,
+and attach the npm-format tarball, source archive and SHA-256 checksums. Release
+notes must state the supported contracts, tests actually executed and known limits.
+A regular release does not imply arbitrary-app or physical-device coverage.
+
+Keep npm registry publication separate: no package-name ownership or registry
+publication is implied by a GitHub release. Exclude private application sources,
+local adapters, test credentials and raw run artifacts from every attachment.

@@ -14,8 +14,7 @@ a portable process driver, and three contracts. Each runs against a healthy
 control, an intentionally broken implementation, and a fix. The assertions stay
 unchanged. No API key, model, account, Docker service, or cloud backend is required.
 
-This is a developer preview with working reference experiments and a typed driver
-interface. Integrating your own app requires an adapter and controlled test data.
+Version 0.1.0 includes working reference experiments and a typed driver interface. Integrating your own app requires an adapter and controlled test data.
 It does not automatically certify arbitrary apps or discover every bug.
 
 ![Native iOS booking experiment: the app confirms success, but the backend ledger contains two bookings.](docs/assets/native-booking-report.png)
