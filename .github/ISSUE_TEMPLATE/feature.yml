@@ -1,0 +1,19 @@
+name: Experiment or adapter proposal
+description: Propose an observable failure contract or an app integration.
+body:
+  - type: textarea
+    attributes:
+      label: Engineering question
+      description: Which user intent or failure is difficult to verify today?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Evidence and invariant
+      description: What would distinguish a healthy baseline, a real defect and a fix? Use synthetic examples.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Integration and limits
+      description: Platform, automation runner, required access and what the experiment cannot prove.

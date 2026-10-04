@@ -1,5 +1,8 @@
 # UnhappyPath
 
+[![Checks](https://github.com/dharmendrathinks/unhappypath/actions/workflows/check.yml/badge.svg)](https://github.com/dharmendrathinks/unhappypath/actions/workflows/check.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 **One tap. Two bookings. The screen still says success.**
 
 UnhappyPath is a local reliability lab for interrupted mobile journeys. It runs
@@ -19,9 +22,11 @@ It does not automatically certify arbitrary apps or discover every bug.
 
 ## Try the portable lab
 
-Requires Node.js 22 or newer. From this repository:
+Requires Node.js 22 or newer. Clone the repository and run:
 
 ```sh
+git clone https://github.com/dharmendrathinks/unhappypath.git
+cd unhappypath
 npm ci --ignore-scripts
 npm run demo -- --out runs/first-demo
 node dist/cli.js serve runs/first-demo

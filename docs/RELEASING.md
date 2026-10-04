@@ -40,11 +40,14 @@ and publisher access are not assumed. Publishing on GitHub does not require npm
 publication. If a registry release is desired, confirm the available package name
 and ownership, update metadata and regenerate the lockfile before publishing.
 
-Before creating the public repository, set its description, MIT license, topics,
-and contribution/security links. Enable private vulnerability reporting if the
-host supports it. CI is configured but cannot be claimed to have run remotely
-until the repository is pushed and those runs complete.
+The repository is hosted at [dharmendrathinks/unhappypath](https://github.com/dharmendrathinks/unhappypath).
+It is currently private; pushing code does not change its visibility. Keep release
+preparation private until the owner explicitly chooses to make it public.
+Description, topics, license and contribution links are supplied. Enable private
+vulnerability reporting when the host supports it. Record actual remote CI results
+in [VERIFICATION.md](VERIFICATION.md); configured workflows alone are not evidence
+of a successful run.
 
-No publishing credentials or automatic publication workflow are included. The
-source and artifacts can be prepared entirely locally. Actual upload/publishing
-is a separate action from this readiness process.
+No publishing credentials or automatic publication workflow are included. GitHub
+visibility changes, GitHub releases and npm publication are separate actions from
+pushing the source to this private repository.
