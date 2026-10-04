@@ -59,6 +59,22 @@ replace reviewing custom adapter data or recordings before sharing.
 These tests establish the three declared reference contracts on the recorded
 local environment. They do not establish real-device behavior, Android support,
 radio-loss or jetsam behavior, arbitrary-app compatibility, distributed database
-recovery, external adoption, or saved engineering time. Remote GitHub Actions
-runs have not occurred; workflows are supplied for the eventual public repository.
+recovery, external adoption, or saved engineering time.
 No API keys, paid model calls, signing account or cloud backend were used.
+
+## Remote CI verification
+
+On 4 October 2026, [GitHub Actions run 37169391165](https://github.com/dharmendrathinks/unhappypath/actions/runs/37169391165)
+passed on commit `b00848f`. Both Ubuntu jobs (Node 22 and 24) passed the build,
+14 automated tests, formatting, strict type checking, nine portable reference
+experiments and package dry run. The Node 22 job also passed the Chromium report
+test. Portable evidence was retained as workflow artifacts. The repository remains
+private, so these links currently require repository access.
+
+
+[Native GitHub Actions run 37169418055](https://github.com/dharmendrathinks/unhappypath/actions/runs/37169418055)
+also passed on the same commit. The `macos-15` runner built the app, executed all
+nine reference experiments on disposable iOS 18.5 simulators, and exported the
+`native-reference-evidence` artifact. Each contract produced baseline PASS,
+broken FAIL and fixed PASS. The complete matrix took approximately ten minutes.
+Workflow artifacts are subject to the repository's retention policy.
